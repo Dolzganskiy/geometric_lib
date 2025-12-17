@@ -20,7 +20,7 @@ jobs:
     
     - name: Run tests
       run: |
-        if [[ "${{ runner.os }}" == "Windows" ]]; then
+        if [ "${{ runner.os }}" = "Windows" ]; then
           py -m unittest discover -p "test_*.py" -v
         else
           python -m unittest discover -p "test_*.py" -v
