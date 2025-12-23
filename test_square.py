@@ -37,6 +37,11 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(square.area(large_side), 1e12)
         self.assertEqual(square.perimeter(large_side), 4e6)
 
+    def test_newcase(self):
+
+        side = 0.99999999999
+        self.assertEqual(square.perimeter(side), 3.99999999996)
+
 if __name__ == '__main__':
     unittest.main()
     
