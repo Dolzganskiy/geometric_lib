@@ -34,6 +34,11 @@ class TestCircle(unittest.TestCase):
         large_radius = 1000000
         self.assertAlmostEqual(circle.area(large_radius), math.pi * 1e12)
         self.assertAlmostEqual(circle.perimeter(large_radius), 2 * math.pi * 1e6)
+
+    def test_area_deci(self):
+
+        self.assertAlmostEqual(circle.area(2), math.pi * 6.30)
     
 if __name__ == '__main__':
+
     unittest.main()
